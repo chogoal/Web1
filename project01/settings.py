@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent # resolve까지 -> 이 파일의 os상 경로, parent -> 상위 2개의 project 폴더
 
 env_list = dict()
 
