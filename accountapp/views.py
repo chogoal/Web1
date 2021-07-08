@@ -5,4 +5,7 @@ from django.shortcuts import render
 
 def hello_world(requests):
     # return HttpResponse('Hello World!') # alt + enter 로 간단히 import
-    return render(requests, 'accountapp/hello_world.html')
+    if requests.method == 'POST':
+        return render(requests, 'accountapp/hello_world.html', context={'text': 'POST METHOD!'})
+    else:
+        return render(requests, 'accountapp/hello_world.html', context={'text': 'GET METHOD!'})
