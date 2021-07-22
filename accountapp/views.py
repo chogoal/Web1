@@ -47,7 +47,7 @@ class AccountDetailView(DetailView):
 has_ownership = [login_required, account_ownership_required]
 
 
-# 메서드 용 데코레이터 함수와 함수용 데코레이터 함수가 다름
+# 메서드용 데코레이터와 함수용 데코레이터가 다름
 @method_decorator(has_ownership, 'get')
 @method_decorator(has_ownership, 'post')
 class AccountUpdateView(UpdateView):
